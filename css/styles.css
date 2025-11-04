@@ -1,0 +1,578 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+     background-color: rgb(166, 155, 173);
+     color:rgb(77, 22, 22);
+     font-family: Time 'Times New Roman', Times, serif;
+     margin: 50px;
+     counter-reset: section;
+     animation-name: example;
+     animation-duration: 7s;
+     animation-delay: 1s;
+     animation-iteration-count: infinite;
+}
+
+@keyframes example {
+   0% {background-color: rgb(220, 209, 223);}
+   20% {background-color: rgb(178, 192, 56);}
+   40% {background-color: rgb(25, 44, 209);}
+   60% {background-color: rgb(65, 65, 126);}
+   80% {background-color: rgb(241, 144, 189);}
+   100% {background-color: rgb(34, 114, 151);} 
+ 
+}
+ /* Header/Blog Title*/
+ .header {
+   padding: 30px;
+   text-align: center;
+   background: pink;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   transition: width 5s, height 6s, transform 5s;
+   width: 500px;
+   height: 300px;
+   animation-name: babe;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+
+ }
+
+ @keyframes babe {
+   0% {background-color: rgb(72, 68, 73);}
+   20% {background-color: rgb(173, 248, 223);}
+   40% {background-color: rgb(161, 47, 47);}
+   60% {background-color: rgb(126, 65, 121);}
+   80% {background-color: rgb(183, 190, 84);}
+   100% {background-color: rgb(209, 68, 25);} 
+ }
+ .header:hover {
+   width: 900px;
+   height: 300px;
+   transform: matrix3d(100);
+ }
+ .header h1 {
+   font-size: 50px;
+  
+ }
+
+ ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   position: absolute; 
+   overflow: hidden;
+   top: 0;
+   
+ }
+ 
+  li {
+    float: left;
+  
+  }
+ 
+ li a, .dropbtn {
+    display: inline-block;
+    color: #000;
+    padding: 12px 14px;
+    text-align: center;
+    text-decoration: none;
+ }
+ 
+ li a.active {
+    background-color: #04AA6D;
+    color: whitesmoke;
+ }
+ 
+ li a:hover, .dropdown:hover 
+ .dropbtn {
+     background-color:#555;
+     color: white;
+ }
+ 
+ li.dropdown {
+   display: inline-block;
+   box-sizing: border-box;
+ }
+  .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba (0, 0, 0, 0.2);
+   z-index: 1;
+  }
+ 
+  .dropdown-content a {
+   color: black;
+   padding: 10px 12px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+  }
+ 
+  .dropdown-content a:hover {
+   background-color: #f1f1f1;
+  }
+ 
+   .dropdown:hover .dropdown-content 
+   {
+      display: block;
+   }
+
+   /* unvisited link*/
+a:link {
+   background-color: blueviolet;
+   color: rgb(145, 98, 29);
+}
+/* visited link */
+a:visited {
+    background-color: rgb(110, 78, 78);
+    color:red;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    
+   }
+
+/* mouse over link*/
+a:hover {
+    background-color: coral;
+    color: darkcyan;
+   }
+
+/* selected link */
+a:active {
+   background-color: green;
+   color:rgb(232, 238, 243);
+}
+
+h2 {
+   background-color: rgb(206, 157, 148) ;
+   border-radius: 10px;
+   color: gray;
+   font-family: Courier New;
+   margin-left: 30%;
+   margin-right: 30%;
+   text-align: center;
+}
+
+h3 {
+   background-color: coral;
+   border-radius: 5px;
+   color:rgb(189, 71, 173);
+   font-family: Courier New;
+   margin-right: 25%; 
+   font-size: 30px;
+}
+
+
+h4 {
+   background-color: lightskyblue;
+   border-bottom: 3px solid blue;
+   border-left: 3px  solid blue;
+   border-radius: 12px;
+   color: rgb(65, 190, 174);
+   font-family: papyrus;
+   margin-left: 300px;
+   margin-right: 300px;
+   padding: 10px;
+   text-align: center;
+}
+
+h5 {
+   background-color: tomato;
+    border-bottom: 3px solid red;
+    border-radius: 4px;
+}
+
+h6 {
+   font-size: medium;
+}
+
+h6::before {
+   counter-increment: subsection;
+   content: counter(section) "." counter(subsection);
+   font-size: medium;
+}
+.fan {
+   background-color: #000;
+   border-bottom: 3px solid red;
+   border-radius: 4px;
+   counter-reset: subsection;
+   font-size: medium;
+   margin-right: 200px;
+}
+
+.fan::before {
+   counter-increment: section;
+   content: "Section" counter(section) ".";
+}
+hr {
+   background-color: rgb(132, 141, 175);
+   border-color: rgb(24, 19, 19);
+   border-width: 5px;
+   border-style: none ;
+   border-top-style: dotted; 
+   width: 7%;
+}
+
+.active {
+   background-color: #4CAF50;
+}
+
+.center {
+    text-align: center;
+}
+
+.gray-element {
+    background-color: lightgray;
+    border-radius: 8px;
+    margin-right: 400px;
+}
+.round {
+  background-color: lightgrey;
+  display: inline;
+  width: 70px;
+  border: 15px solid blue;
+  padding: 5px;
+  margin: 10px;
+}
+
+ /* Style the top navigation bar */
+ .topnav {
+   overflow: hidden;
+   background-color: #333;
+ }
+
+ /* Style the topnav links */
+ .topnav a {
+   float: left;
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+
+ /* Change color on hover */
+ .topnav a:hover {
+   background-color: #ddd;
+   color: black;
+ }
+
+ /* Create two unequal columns that floats next to each other */
+ /* Left column */
+ .leftcolumn {
+   float: left;
+   width: 70%;
+ }
+
+ /* Right column */
+ .rightcolumn {
+   float: left;
+   width: 30%;
+   background-color: #f1f1f1;
+   padding-left: 20px;
+ }
+
+ /* Fake image */
+ .fakeimg {
+   background-color: rgb(149, 94, 151);
+   height: 100px;
+   width: 100%;
+   padding: 20px;
+   transition: width 3s height 4s;
+ }
+
+ .fakeimg:hover {
+   width: 105%;
+   height: 125px;
+ }
+ p::first-letter {
+   color: #ff0000;
+   font-size: xx-large;
+ }
+p::first-line {
+   color: #0000ff;
+   font-variant: small-caps;
+}
+p {
+   text-shadow: 2px 2px green;
+}
+.realImg {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: none;
+}
+.realImg:hover {
+   width: 30%;
+}
+img {
+   border:0.5px 5px dimgray;
+   margin: 0 5px 15px 5px;
+   border-radius: 50px;
+   padding: 25px;
+   width: 90%;
+   height: 300px;
+   transition: width 3s, height 3s, transform 3s, linear 1s;
+}
+
+img:hover {
+   width: 90%;
+   height: 450px;
+   transform: matrix(100);
+}
+p.step {
+     border: 2px solid red;
+     border-radius: 10px;
+     margin-left: 70%;
+     text-align: end;
+
+}
+
+/* Three values */
+p.three {
+   border-style: dotted solid double;
+}
+
+::selection {
+   background-color: yellowgreen;
+   color: red;
+}
+ /* Add a card effect for articles */
+ .card {
+   background-color: rgb(150, 120, 120);
+   padding: 20px;
+   margin-top: 20px;
+   transition: width 3s, height 4s;
+   transition-delay: 1s;
+ } 
+
+ /* Clear floats after the columns */
+ .row::after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+ /* Footer */
+ .footer {
+   padding: 20px;
+   text-align: center;
+   background-color: rgb(211, 177, 177);
+   margin-top: 20px;
+   animation-name: babe;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+
+ }
+
+ /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 800px) {
+   .leftcolumn .rightcolumn {
+     width: 100%;
+     padding: 0;
+      }
+   }
+   
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+ @media screen and (max-width: 400px) {
+   .topnav a {
+    float: none;
+    width: 100%;
+      }
+   }
+
+   
+label {
+   padding: 12px 12px 12px 0;
+   display: inline-block;
+ }
+ 
+ * {
+   box-sizing: border-box;
+  }
+ 
+  input[type=text]:focus, [type=email]:focus, [type=number]:focus, [type=password]:focus {
+   background-color: lightblue;
+  }
+
+  input [type=text], select, textarea {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid rgb(121, 57, 57);
+     border-radius: 4px;
+     resize: vertical;
+  }
+
+  input [type=submit] {
+   background-color: #04AA6D;
+   border: none;
+   color: white;
+   padding: 16px 24px;
+   border-radius: 4px;
+   cursor: pointer;
+   margin: 4px 2px;
+   float: right;
+  }
+
+  input [type=submit]:hover {
+   background-color: #45a049;
+  }
+  .container {
+   border-radius: 5px;
+   background-color: #e2b4b4;
+   padding: 20px;
+  }
+
+  .col-25 {
+   float: left;
+   width: 25%;
+   margin-top: 6px;
+  }
+
+  .col-75 {
+   float: right;
+   width: 70%;
+   margin: 6px;
+  }
+  /* Clear floats after the columns */
+  .row::after {
+   content: "";
+   display: table;
+   clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+   .col-25, .col-75, input[type=submit] {
+     width: 75%;
+     margin-top: 0;
+   }
+  }
+
+  #grad1 {
+   background-color: purple; /* For browsers that do not support gradients */
+   background-image: linear-gradient(to right, red, orange, yelloow, green, blue, indigo, violet); 
+ }
+
+ .box {
+   width: 500px;
+   height: 300px;
+   padding: 15px;
+   background-color: coral;
+   box-shadow: 10px 10px;
+ }
+
+ [title~="flower"] {
+   border: 5px solid yellow;
+}
+
+.responsive {
+   float: left;
+}
+
+#div1, #div2, #div3, #div4, #div5 {
+   background-color: rgb(180, 91, 91);
+   width: 100px;
+   height: 60px;
+   font-weight: bold;
+   position: relative;
+   animation: mymove 4s infinite;
+   animation-delay: 1s;
+}
+
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+   from {left: 0px;}
+   to {left: 500px;}
+}
+
+
+#myImg {
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0; 
+   top: 0;
+   width: 100%; /* Fukll width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable screen if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal content (image) */
+.modal-content {
+   margin: auto;
+   display: block;
+   width: 80%;
+   max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+   margin: auto;
+   display: block;
+   width: 80%;
+   max-width: 700px;
+   text-align: center;
+   color: #ccc;
+   padding: 10px 0;
+   height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+   animation-name: zoom;
+   animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+   from {transform: scale(0.1)}
+   to {transform: scale(1)}
+}
+
+/* Close Button */
+.close {
+   position: absolute;
+   top: 15px;
+   right: 35px;
+   color: #f1f1f1;
+   font-size: 40px;
+   font-weight: bold;
+   transition: 0.3s;
+}
+
+.close:hover, 
+.close:focus {
+   color: #bbb;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+/* 100% Image width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+   .modal-content {
+      width: 100%;
+   }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+    <li class="current"><a href="index.html">Home</a></li><br>
+    <h1>NEWS</h1>
+   
+    
+
+    
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="BEEJAY 01.jpg">
+            <img src="BEEJAY 01.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">002</div>
+     </div>
+    </div>
+   
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220218-WA0000.jpg">
+            <img src="IMG-20220218-WA0000.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">003</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220218-WA0005.jpg">
+            <img src="IMG-20220218-WA0005.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">004</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220218-WA0004.jpg">
+            <img src="IMG-20220218-WA0004.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">005</div>
+     </div>
+    </div>
+  
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG_20210404_115015_644.jpg">
+            <img src="IMG_20210404_115015_644.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">006</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG_20220102_134004_564.jpg">
+            <img src="IMG_20220102_134004_564.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">007</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220217-WA0018.jpg">
+            <img src="IMG-20220217-WA0018.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">008</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG_20220410_074458_031.jpg">
+            <img src="IMG_20220410_074458_031.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">009</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220218-WA0006.jpg">
+            <img src="IMG-20220218-WA0006.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">010</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG_20220410_111046_777.jpg">
+            <img src="IMG_20220410_111046_777.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">011</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220814-WA0069.jpg">
+            <img src="IMG-20220814-WA0069.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">012</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG_20220102_123110_498_1641133776492.jpg">
+            <img src="IMG_20220102_123110_498_1641133776492.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">013</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220814-WA0169.jpg">
+            <img src="IMG-20220814-WA0169.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">014</div>
+     </div>
+    </div>
+
+    <div class="responsive">
+     <div class="gallery">
+        <a target="_blank" href="IMG-20220814-WA0173.jpg">
+            <img src="IMG-20220814-WA0173.jpg" alt="BEEJAY 01" width="600" height="400">
+        </a>
+        <div class="desc">015</div>
+     </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <img id="myImg" src="IMG_20220102_080124_934-1.jpg" alt="BEEJAY 01" width=" 600" height="400">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElemnetById('myImg');
+        var modalImg = document.getElementById('img01');
+        var captionText = document.getElementById('caption');
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+            var span = document.getElementByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+    </script>
+</body>
+</html>
